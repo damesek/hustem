@@ -21,7 +21,8 @@
   citius/citius       {:mvn/version "0.2.4"}
   metosin/malli       {:mvn/version "0.12.0"}
   org.slf4j/slf4j-nop {:mvn/version "1.7.25"}
-  clj-commons/clj-ssh {:mvn/version "0.5.15"}}
+  clj-commons/clj-ssh {:mvn/version "0.5.15"}
+  com.atlascopco/hunspell-bridj {:mvn/version "1.0.4"}}
 
  :aliases
  {:dev

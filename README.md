@@ -2,10 +2,19 @@
 
 WIP
 
+
+
 HuStem was created to work with Snowball's .sbl files.
 The goal is to update the quality of the Hungarian stemmer config file.
 To achieve this, I first try to identify the issues and then proceed with tests, following a TDD (Test-Driven Development) workflow.
 
+## Error rate: 
+
+```clojure
+{:hunspell 32,91%, :snowball 47,41%, :hunspell-mdb 32,91%}
+```
+This means Hunspell is 27% more accurate than Snowball.
+I tested two different dic/aff sources, but there was no difference in efficiency.
 
 ## Snowball cli basics
 

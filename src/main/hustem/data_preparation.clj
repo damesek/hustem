@@ -1,9 +1,19 @@
 (ns hustem.data-preparation
   "We prepare here the data for future works."
   (:require [clojure.edn :as edn]
-            [clojure.string :refer [join replace
+            [clojure.string :refer [join replace escape
                                     lower-case split
                                     split-lines]]))
+
+
+
+(def escape-char-map
+  (zipmap (mapv char "[!”#$%&’()*+,-./:;<=>?@[]^_`{|}~(]") (repeat "")))
+
+(defn escape-strings [sentence]
+  (escape sentence escape-char-map))
+
+
 
 
 (def tanakh-hu-verses
@@ -19,7 +29,7 @@
   [verses-vector]
   (let [merged (join " " verses-vector)]
     (-> merged
-        (replace #"[.,?:;'!-\"]" "")
+        escape-strings
         (lower-case)
         (split #"\s+")
         set)))
