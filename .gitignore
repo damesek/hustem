@@ -28,3 +28,6 @@ pom.xml.asc
 /public
 *.iml
 yarn.lock
+
+*.dic
+*.aff
