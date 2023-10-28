@@ -2,9 +2,10 @@
 
 WIP
 
-HuStem created for work with Snowball .sbl files.
-Goal is upadate the quality of the Hungarian stemmer config file.
-Therefore we wrote first we tried find the issues and in this way the tests (TDD workflow).
+HuStem was created to work with Snowball's .sbl files.
+The goal is to update the quality of the Hungarian stemmer config file.
+To achieve this, I first try to identify the issues and then proceed with tests, following a TDD (Test-Driven Development) workflow.
+
 
 ## Snowball cli basics
 
