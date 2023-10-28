@@ -1,0 +1,4 @@
+-e
+(require,'user)
+-e
+(in-ns,'user)

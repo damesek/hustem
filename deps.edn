@@ -1,0 +1,42 @@
+{:version     "0.1.0"
+ :description "Hungarian Stemmer Project to Fix issues with HU stem"
+ :url         "i-dont-have-one-yet"
+ :license     {:name "Eclipse Public License - v 2.0"
+               :url  "http://www.eclipse.org/legal/epl-v20.html"}
+ :paths
+ [;"src/config"
+  "src/main"
+  "src/resources"
+  "src/test"
+  "src/dev"
+  "src/java"
+  "target/classes"]
+
+ :java-source-paths
+ ["src/java"]
+
+ :deps
+ {org.clojure/clojure {:mvn/version "1.11.0"}
+  criterium/criterium {:mvn/version "0.4.6"}
+  citius/citius       {:mvn/version "0.2.4"}
+  metosin/malli       {:mvn/version "0.12.0"}
+  org.slf4j/slf4j-nop {:mvn/version "1.7.25"}
+  clj-commons/clj-ssh {:mvn/version "0.5.15"}}
+
+ :aliases
+ {:dev
+  {:extra-paths ["src/dev"]
+   :extra-deps  {}
+   :main-opts   ["-e" "(require,'user)"
+                 "-e" "(in-ns,'user)"]}
+
+  :test
+  {:extra-paths ["src/test"]
+   :main-opts   ["-m" "kaocha.runner"]
+   :jvm-opts    ["-Xmx512m"]
+   :extra-deps  {lambdaisland/kaocha {:mvn/version "1.70.1086"}}}
+
+  :build
+  {:extra-deps {io.github.clojure/tools.build {:mvn/version "0.9.6"}}
+   :ns-default build}
+  }}

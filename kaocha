@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -euo pipefail # stop, when error occurs, even within pipes
+
+clojure -M:test "$@"
